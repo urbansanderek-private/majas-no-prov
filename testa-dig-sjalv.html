@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologi ÅK7 – Testa dig själv: 6.1 Cellens uppbyggnad</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #1a1a1a; line-height: 1.7; margin: 0; padding: 20px; }
+    .container { max-width: 1000px; margin: auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+    header { background: #2d3436; color: white; padding: 22px; text-align: center; }
+    h1 { margin: 0; font-size: 1.9rem; }
+    .intro { padding: 20px; font-size: 1.05rem; color: #2d3436; }
+    .section { padding: 24px; }
+    h2 { background: #2d3436; color: white; padding: 12px 20px; margin: 0 0 18px; border-left: 6px solid #1e272e; font-size: 1.3rem; }
+    .question-box { background: #f5f6fa; border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin: 16px 0; }
+    .question-box h3 { margin: 0 0 8px; color: #2d3436; font-size: 1.1rem; }
+    .hint { font-size: 0.85rem; color: #636e72; font-style: italic; margin-bottom: 8px; }
+    textarea { width: 100%; min-height: 120px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical; font-family: inherit; margin-bottom: 8px; }
+    .word-count { font-size: 0.8rem; color: #74b9ff; text-align: right; margin-top: 4px; }
+    .save-notice { font-size: 0.85rem; color: #636e72; margin-top: 6px; font-style: italic; }
+    .show-btn { background: #00b894; color: white; border: none; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; margin-top: 8px; }
+    .show-btn:hover { background: #00a07d; }
+    .answer { margin-top: 10px; padding: 12px; background: #e8f5e9; border: 1px solid #00b894; border-radius: 8px; font-size: 0.95rem; display: none; }
+    .extra { font-size: 0.85rem; color: #27ae60; font-style: italic; margin-top: 8px; }
+    footer { text-align: center; padding: 18px; font-size: 0.95rem; color: #636e72; background: #f0f0f0; }
+    @media (max-width: 600px) { body { padding: 10px; } h1 { font-size: 1.6rem; } .section { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Testa dig själv: 6.1 Cellens uppbyggnad</h1>
+      <p><strong>Skriv svar – sparas i webbläsaren – visa facit med knapp!</strong></p>
+    </header>
+
+    <div class="intro">
+      <p>Exakta frågor från uppslaget 6.1. Skriv ditt svar och klicka på <strong>"Visa facit"</strong> för att se bokens svar + eventuella förtydliganden.</p>
+    </div>
+
+    <div class="section">
+      <h2>6.1 Cellens uppbyggnad</h2>
+
+      <!-- Fråga 1 -->
+      <div class="question-box">
+        <h3>1. Hur får cellen sin energi?</h3>
+        <div class="hint">Svar finns på sidan <strong>161</strong></div>
+        <textarea id="q61_1" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_1">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_1')">Visa facit</button>
+        <div class="answer" id="ans61_1">
+          <strong>Bokens svar:</strong> Genom cellandning i mitokondrierna, där glukos och syre omvandlas till energi i form av ATP.<br>
+          <span class="extra"><em>Förtydligande (min kunskap):</em> Cellandningen sker i tre steg: glykolys (i cytoplasman), citronsyracykeln och elektrontransportkedjan (i mitokondrierna). ATP är cellens "energivaluta".</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 2 -->
+      <div class="question-box">
+        <h3>2. Vilka uppgifter har cellmembranet?</h3>
+        <div class="hint">Svar finns på sidan <strong>160</strong></div>
+        <textarea id="q61_2" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_2">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_2')">Visa facit</button>
+        <div class="answer" id="ans61_2">
+          <strong>Bokens svar:</strong> Skyddar cellen, styr vad som går in och ut (selektivt permeabel), har receptorer för signaler.<br>
+          <span class="extra"><em>Förtydligande:</em> Består av ett dubbel lipidlager med inbäddade proteiner (fosfolipider + proteiner).</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 3 -->
+      <div class="question-box">
+        <h3>3. Vilken celldel bestämmer vilka proteiner som cellen ska tillverka?</h3>
+        <div class="hint">Svar finns på sidan <strong>161</strong></div>
+        <textarea id="q61_3" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_3">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_3')">Visa facit</button>
+        <div class="answer" id="ans61_3">
+          <strong>Bokens svar:</strong> Kärnan, där DNA:t finns.<br>
+          <span class="extra"><em>Förtydligande:</em> DNA → mRNA (transkription i kärnan) → protein (translation i ribosomer i cytoplasman).</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 4 -->
+      <div class="question"question-box">
+        <h3>4. Vad händer med cellens avfall?</h3>
+        <div class="hint">Svar finns på sidan <strong>161</strong></div>
+        <textarea id="q61_4" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_4">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_4')">Visa facit</button>
+        <div class="answer" id="ans61_4">
+          <strong>Bokens svar:</strong> Bryts ner i lysosomer eller transporteras ut via cellmembranet.<br>
+          <span class="extra"><em>Förtydligande:</em> Lysosomer innehåller enzymer som bryter ner avfall. Exocytos används för att släppa ut ämnen.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 5 -->
+      <div class="question-box">
+        <h3>5. Nämn några olika typer av celler i din kropp.</h3>
+        <div class="hint">Svar finns på sidan <strong>160</strong></div>
+        <textarea id="q61_5" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_5">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_5')">Visa facit</button>
+        <div class="answer" id="ans61_5">
+          <strong>Bokens svar:</strong> Nervceller, muskelceller, hudceller, blodkroppar, benmärgsceller, leverceller m.fl.<br>
+          <span class="extra"><em>Förtydligande:</em> Kroppen har ca 200 olika specialiserade celltyper.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 6 -->
+      <div class="question-box">
+        <h3>6. Beskriv hur några organsystem fungerar och hur de samarbetar.</h3>
+        <div class="hint">Svar finns på sidan <strong>160–161</strong></div>
+        <textarea id="q61_6" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_6">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_6')">Visa facit</button>
+        <div class="answer" id="ans61_6">
+          <strong>Bokens svar:</strong> Exempel: Andningsorganen tar in syre → cirkulationssystemet transporterar det → cellerna använder det för energi. Matsmältningssystemet bryter ner mat → näring tas upp i blodet → cellerna använder det.<br>
+          <span class="extra"><em>Förtydligande:</em> Alla organsystem är beroende av varandra för att kroppen ska fungera.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 7 -->
+      <div class="question-box">
+        <h3>7. Hur kan cellerna skicka meddelande till varandra?</h3>
+        <div class="hint">Svar finns på sidan <strong>161</strong></div>
+        <textarea id="q61_7" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_7">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_7')">Visa facit</button>
+        <div class="answer" id="ans61_7">
+          <strong>Bokens svar:</strong> Via hormoner (som transporteras med blodet) eller signalmolekyler (som verkar lokalt).<br>
+          <span class="extra"><em>Förtydligande:</em> Hormoner = endokrin signalering. Nära celler = paracrin signalering. Nervceller använder neurotransmittorer (synaptisk signalering).</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 8 -->
+      <div class="question-box">
+        <h3>8. Samtidigt som det varje dag bildas många miljarder nya celler i din kropp så dör det ungefär lika många celler. Det sker på ett kontrollerat sätt som kallas programmerad celldöd, apoptos. Hur fungerar programmerad celldöd?</h3>
+        <div class="hint">Svar finns på sidan <strong>161</strong></div>
+        <textarea id="q61_8" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_8">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_8')">Visa facit</button>
+        <div class="answer" id="ans61_8">
+          <strong>Bokens svar:</strong> Cellen krymper, DNA:t klipps sönder, cellen bryts ner till små bitar som fagocyteras (ätas upp) av andra celler.<br>
+          <span class="extra"><em>Förtydligande (min kunskap):</em> Apoptos styrs av gener som p53 och caspase-enzymer. Viktigt för att ta bort skadade eller onödiga celler, t.ex. under fosterutveckling (bildar fingrar).</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 9 -->
+      <div class="question-box">
+        <h3>9. Varför kan forskning om till exempel jästsvampar, bananflugor, maskar och råttor vara viktigt för att forskarna ska kunna få fram nya läkemedel mot sjukdomar som drabbar oss människor?</h3>
+        <div class="hint">Svar finns på sidan <strong>161</strong></div>
+        <textarea id="q61_9" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc61_9">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q61_9')">Visa facit</button>
+        <div class="answer" id="ans61_9">
+          <strong>Bokens svar:</strong> Många gener och processer är lika hos alla levande organismer. Forskning på enklare organismer ger kunskap som kan användas på människor.<br>
+          <span class="extra"><em>Förtydligande:</em> Modellorganismer som <em>Drosophila melanogaster</em> (bananfluga) har använts för att förstå genetik, utveckling och sjukdomar. Jästsvampar används för att studera cellcykeln.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Alla svar sparas i din webbläsare – ingen inloggning krävs!</p>
+    </footer>
+  </div>
+
+  <script>
+    // Spara svar + ordantal
+    const allQuestions = document.querySelectorAll('textarea');
+    allQuestions.forEach(textarea => {
+      const id = textarea.id;
+      const saved = localStorage.getItem(id);
+      if (saved) {
+        textarea.value = saved;
+        updateWordCount(id);
+      }
+      textarea.addEventListener('input', () => {
+        localStorage.setItem(id, textarea.value);
+        updateWordCount(id);
+      });
+    });
+
+    function updateWordCount(id) {
+      const text = document.getElementById(id).value.trim();
+      const words = text === '' ? 0 : text.split(/\s+/).length;
+      document.getElementById('wc' + id.slice(1)).textContent = `${words} ord`;
+    }
+
+    function showAnswer(qId) {
+      const answerDiv = document.getElementById('ans' + qId.slice(1));
+      answerDiv.style.display = answerDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologi ÅK7 – Testa dig själv: 6.2 Andningsorganen</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #1a1a1a; line-height: 1.7; margin: 0; padding: 20px; }
+    .container { max-width: 1000px; margin: auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+    header { background: #e67e22; color: white; padding: 22px; text-align: center; }
+    h1 { margin: 0; font-size: 1.9rem; }
+    .intro { padding: 20px; font-size: 1.05rem; color: #2d3436; }
+    .section { padding: 24px; }
+    h2 { background: #e67e22; color: white; padding: 12px 20px; margin: 0 0 18px; border-left: 6px solid #d35400; font-size: 1.3rem; }
+    .question-box { background: #fef5e7; border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin: 16px 0; }
+    .question-box h3 { margin: 0 0 8px; color: #e67e22; font-size: 1.1rem; }
+    .hint { font-size: 0.85rem; color: #636e72; font-style: italic; margin-bottom: 8px; }
+    textarea { width: 100%; min-height: 120px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical; font-family: inherit; margin-bottom: 8px; }
+    .word-count { font-size: 0.8rem; color: #74b9ff; text-align: right; margin-top: 4px; }
+    .save-notice { font-size: 0.85rem; color: #636e72; margin-top: 6px; font-style: italic; }
+    .show-btn { background: #e67e22; color: white; border: none; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; margin-top: 8px; }
+    .show-btn:hover { background: #d35400; }
+    .answer { margin-top: 10px; padding: 12px; background: #fef5e7; border: 1px solid #e67e22; border-radius: 8px; font-size: 0.95rem; display: none; }
+    .extra { font-size: 0.85rem; color: #27ae60; font-style: italic; margin-top: 8px; }
+    footer { text-align: center; padding: 18px; font-size: 0.95rem; color: #636e72; background: #f0f0f0; }
+    @media (max-width: 600px) { body { padding: 10px; } h1 { font-size: 1.6rem; } .section { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Testa dig själv: 6.2 Andningsorganen</h1>
+      <p><strong>Skriv svar – sparas i webbläsaren – visa facit med knapp!</strong></p>
+    </header>
+
+    <div class="intro">
+      <p>Exakta frågor från uppslaget 6.2. Skriv ditt svar och klicka på <strong>"Visa facit"</strong> för att se bokens svar + eventuella förtydliganden.</p>
+    </div>
+
+    <div class="section">
+      <h2>6.2 Andningsorganen</h2>
+
+      <!-- Fråga 1 -->
+      <div class="question-box">
+        <h3>1. Nämn två viktiga molekyler som alla dina celler behöver för att kunna leva.</h3>
+        <div class="hint">Svar finns på sidan <strong>170</strong></div>
+        <textarea id="q62_1" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_1">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_1')">Visa facit</button>
+        <div class="answer" id="ans62_1">
+          <strong>Bokens svar:</strong> Syre (O₂) och glukos (drivsocker).<br>
+          <span class="extra"><em>Förtydligande:</em> Syre används i cellandningen för att producera ATP, glukos är energikällan.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 2 -->
+      <div class="question-box">
+        <h3>2. Beskriv kortfattat matens väg från munnen till analöppningen.</h3>
+        <div class="hint">Svar finns på sidan <strong>170</strong></div>
+        <textarea id="q62_2" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_2">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_2')">Visa facit</button>
+        <div class="answer" id="ans62_2">
+          <strong>Bokens svar:</strong> Mun → svalg → matstrupe → magsäck → tunntarm → tjocktarm → ändtarm → analöppning.<br>
+          <span class="extra"><em>Förtydligande:</em> I tunntarmen sker huvuddelen av näringsupptaget, i tjocktarmen vattenåterabsorption.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 3 -->
+      <div class="question-box">
+        <h3>3. Till vilka små molekyler sönderdelas kolhydrater, proteiner och fetter?</h3>
+        <div class="hint">Svar finns på sidan <strong>170</strong></div>
+        <textarea id="q62_3" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_3">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_3')">Visa facit</button>
+        <div class="answer" id="ans62_3">
+          <strong>Bokens svar:</strong> Kolhydrater → glukos, proteiner → aminosyror, fetter → fettsyror och glycerol.<br>
+          <span class="extra"><em>Förtydligande:</em> Enzymer i matsmältningssystemet bryter ner makromolekyler till monomerer som kan tas upp i blodet.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 4 -->
+      <div class="question-box">
+        <h3>4. Var i kroppen sigs små näringsämnen från maten upp av blodet?</h3>
+        <div class="hint">Svar finns på sidan <strong>170</strong></div>
+        <textarea id="q62_4" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_4">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_4')">Visa facit</button>
+        <div class="answer" id="ans62_4">
+          <strong>Bokens svar:</strong> I tunntarmen (främst tolvfingertarmen och jejunum).<br>
+          <span class="extra"><em>Förtydligande:</em> Tunntarmens veck och mikrovilli ger en stor yta för absorption.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 5 -->
+      <div class="question-box">
+        <h3>5. Vilka är dina andningsorgan?</h3>
+        <div class="hint">Svar finns på sidan <strong>170</strong></div>
+        <textarea id="q62_5" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_5">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_5')">Visa facit</button>
+        <div class="answer" id="ans62_5">
+          <strong>Bokens svar:</strong> Näsa, svalg, luftstrupe, bronker, bronkioler, lungor (med alveoler).<br>
+          <span class="extra"><em>Förtydligande:</em> Diafragman och mellanrevbensmuskler är också viktiga för andningen.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 6 -->
+      <div class="question-box">
+        <h3>6. Vad händer i lungblåsorna?</h3>
+        <div class="hint">Svar finns på sidan <strong>170</strong></div>
+        <textarea id="q62_6" id="q62_6" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_6">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_6')">Visa facit</button>
+        <div class="answer" id="ans62_6">
+          <strong>Bokens svar:</strong> Gasutbyte: syre går från luften in i blodet, koldioxid går från blodet ut i luften.<br>
+          <span class="extra"><em>Förtydligande:</em> Diffusion över tunn vägg i alveolerna och kapillärerna, driven av koncentrationsskillnader.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 7 -->
+      <div class="question-box">
+        <h3>7. Beskriv hur in- och utandning går till.</h3>
+        <div class="hint">Svar finns på sidan <strong>172</strong></div>
+        <textarea id="q62_7" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_7">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_7')">Visa facit</button>
+        <div class="answer" id="ans62_7">
+          <strong>Bokens svar:</strong> <strong>Inandning:</strong> Diafragman drar ihop sig och går ner, mellanrevbensmuskler lyfter revbenen → bröstkorgen blir större → trycket sjunker → luft sugs in.<br>
+          <strong>Utandning:</strong> Muskler slappnar av → bröstkorgen blir mindre → trycket ökar → luft pressas ut.<br>
+          <span class="extra"><em>Förtydligande:</em> Passiv utandning i vila, aktiv vid ansträngning.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 8 -->
+      <div class="question-box">
+        <h3>8. Forskning har visat att de tiotusentals miljarder bakterier som finns i tjocktarmen har stor betydelse för hälsan. Ta reda på mer om hur tarmbakterier, den så kallade tarmfloran, hjälper dig att hålla dig frisk och till och med kan användas för att behandla vissa sjukdomar.</h3>
+        <div class="hint">Svar finns på sidan <strong>170</strong> (delvis), men utökad forskning</div>
+        <textarea id="q62_8" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_8">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_8')">Visa facit</button>
+        <div class="answer" id="ans62_8">
+          <strong>Bokens svar:</strong> Tarmfloran hjälper till att bryta ner fibrer, producera vitaminer (t.ex. K och B), stärker immunförsvaret, hindrar skadliga bakterier.<br>
+          <span class="extra"><em>Förtydligande (min kunskap):</em> Tarmfloran påverkar ämnesomsättning, humör (via tarm-hjärnaxeln), och används i behandlingar som fekal transplantation vid <em>Clostridium difficile</em>-infektion.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 9 -->
+      <div class="question-box">
+        <h3>9. Lungorna och blodet tar upp syre från den luft du andas in, och du andas ut den koldioxid som kroppen vill bli av med. Hur kommer det sig att mun-mot-mun-metoden, då man blåser in sin egen utandningsluft i den som slutat andas, kan användas för att tillföra syre till den sjukes lungor?</h3>
+        <div class="hint">Svar finns på sidan <strong>172</strong></div>
+        <textarea id="q62_9" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc62_9">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q62_9')">Visa facit</button>
+        <div class="answer" id="ans62_9">
+          <strong>Bokens svar:</strong> Utandningsluften innehåller ca 16 % syre (jämfört med 21 % i inandningsluft), vilket räcker för att ge syre till den som slutat andas. Koldioxidhalten är bara 4 %, vilket inte skadar.<br>
+          <span class="extra"><em>Förtydligande:</em> HLR med mun-mot-mun ger tillräckligt med syre för att hålla hjärnan vid liv tills hjälp kommer.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Alla svar sparas i din webbläsare – perfekt repetition inför provet!</p>
+    </footer>
+  </div>
+
+  <script>
+    // Spara svar + ordantal
+    const allQuestions = document.querySelectorAll('textarea');
+    allQuestions.forEach(textarea => {
+      const id = textarea.id;
+      const saved = localStorage.getItem(id);
+      if (saved) {
+        textarea.value = saved;
+        updateWordCount(id);
+      }
+      textarea.addEventListener('input', () => {
+        localStorage.setItem(id, textarea.value);
+        updateWordCount(id);
+      });
+    });
+
+    function updateWordCount(id) {
+      const text = document.getElementById(id).value.trim();
+      const words = text === '' ? 0 : text.split(/\s+/).length;
+      document.getElementById('wc' + id.slice(1)).textContent = `${words} ord`;
+    }
+
+    function showAnswer(qId) {
+      const answerDiv = document.getElementById('ans' + qId.slice(1));
+      answerDiv.style.display = answerDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologi ÅK7 – Testa dig själv: 6.3 Cirkulationsorganen</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #1a1a1a; line-height: 1.7; margin: 0; padding: 20px; }
+    .container { max-width: 1000px; margin: auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+    header { background: #3498db; color: white; padding: 22px; text-align: center; }
+    h1 { margin: 0; font-size: 1.9rem; }
+    .intro { padding: 20px; font-size: 1.05rem; color: #2d3436; }
+    .section { padding: 24px; }
+    h2 { background: #3498db; color: white; padding: 12px 20px; margin: 0 0 18px; border-left: 6px solid #2980b9; font-size: 1.3rem; }
+    .question-box { background: #ebf3fd; border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin: 16px 0; }
+    .question-box h3 { margin: 0 0 8px; color: #3498db; font-size: 1.1rem; }
+    .hint { font-size: 0.85rem; color: #636e72; font-style: italic; margin-bottom: 8px; }
+    textarea { width: 100%; min-height: 120px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical; font-family: inherit; margin-bottom: 8px; }
+    .word-count { font-size: 0.8rem; color: #74b9ff; text-align: right; margin-top: 4px; }
+    .save-notice { font-size: 0.85rem; color: #636e72; margin-top: 6px; font-style: italic; }
+    .show-btn { background: #3498db; color: white; border: none; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; margin-top: 8px; }
+    .show-btn:hover { background: #2980b9; }
+    .answer { margin-top: 10px; padding: 12px; background: #ebf3fd; border: 1px solid #3498db; border-radius: 8px; font-size: 0.95rem; display: none; }
+    .extra { font-size: 0.85rem; color: #27ae60; font-style: italic; margin-top: 8px; }
+    footer { text-align: center; padding: 18px; font-size: 0.95rem; color: #636e72; background: #f0f0f0; }
+    @media (max-width: 600px) { body { padding: 10px; } h1 { font-size: 1.6rem; } .section { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Testa dig själv: 6.3 Cirkulationsorganen</h1>
+      <p><strong>Skriv svar – sparas i webbläsaren – visa facit med knapp!</strong></p>
+    </header>
+
+    <div class="intro">
+      <p>Exakta frågor från uppslaget 6.3. Skriv ditt svar och klicka på <strong>"Visa facit"</strong> för att se bokens svar + eventuella förtydliganden.</p>
+    </div>
+
+    <div class="section">
+      <h2>6.3 Cirkulationsorganen</h2>
+
+      <!-- Fråga 1 -->
+      <div class="question-box">
+        <h3>1. Beskriv blodets väg i de båda kretsloppen.</h3>
+        <div class="hint">Svar finns på sidan <strong>174</strong></div>
+        <textarea id="q63_1" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_1">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_1')">Visa facit</button>
+        <div class="answer" id="ans63_1">
+          <strong>Bokens svar:</strong> 
+          <strong>Lilla kretsloppet:</strong> Höger kammare → lungartär → lungor (gasutbyte) → lungvener → vänster förmak.<br>
+          <strong>Stora kretsloppet:</strong> Vänster kammare → aorta → kroppens artärer → kapillärer (näring/syre) → vener → hålven → höger förmak.<br>
+          <span class="extra"><em>Förtydligande:</em> Syresatt blod = rött (artärer), koldioxidrikt = blått (vener).</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 2 -->
+      <div class="question-box">
+        <h3>2. Vad kallas hjärtats fyra hålrum?</h3>
+        <div class="hint">Svar finns på sidan <strong>174</strong></div>
+        <textarea id="q63_2" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_2">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_2')">Visa facit</button>
+        <div class="answer" id="ans63_2">
+          <strong>Bokens svar:</strong> Höger förmak, höger kammare, vänster förmak, vänster kammare.<br>
+          <span class="extra"><em>Förtydligande:</em> Förmaken tar emot blod, kamrarna pumpar ut det.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 3 -->
+      <div class="question-box">
+        <h3>3. Vad är segelklaffar och fickklaffar?</h3>
+        <div class="hint">Svar finns på sidan <strong>174</strong></div>
+        <textarea id="q63_3" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_3">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_3')">Visa facit</button>
+        <div class="answer" id="ans63_3">
+          <strong>Bokens svar:</strong> 
+          <strong>Segelklaffar:</strong> Mellan förmak och kammare (tri- och bikuspidalklaff).<br>
+          <strong>Fickklaffar:</strong> Mellan kammare och artärer (aorta- och lungklaff).<br>
+          <span class="extra"><em>Förtydligande:</em> Förhindrar backflöde av blod.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 4 -->
+      <div class="question-box">
+        <h3>4. Vilken uppgift har hjärtas kranskärl?</h3>
+        <div class="hint">Svar finns på sidan <strong>174</strong></div>
+        <textarea id="q63_4" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_4">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_4')">Visa facit</button>
+        <div class="answer" id="ans63_4">
+          <strong>Bokens svar:</strong> Förser hjärtmuskeln med syre och näring.<br>
+          <span class="extra"><em>Förtydligande:</em> Kranskärlen är de första som grenar ut från aorta.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 5 -->
+      <div class="question-box">
+        <h3>5. Hur kan blodet ta sig upp från underbenen tillbaka till hjärtat?</h3>
+        <div class="hint">Svar finns på sidan <strong>177</strong></div>
+        <textarea id="q63_5" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_5">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_5')">Visa facit</button>
+        <div class="answer" id="ans63_5">
+          <strong>Bokens svar:</strong> Genom muskelpump (muskler pressar venerna), venklaffar hindrar backflöde, andning (tryckskillnad).<br>
+          <span class="extra"><em>Förtydligande:</em> Venklaffar fungerar som envägsklaffar.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 6 -->
+      <div class="question-box">
+        <h3>6. Nämn några olika typer av blodkroppar som finns i blodet.</h3>
+        <div class="hint">Svar finns på sidan <strong>177</strong></div>
+        <textarea id="q63_6" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_6">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_6')">Visa facit</button>
+        <div class="answer" id="ans63_6">
+          <strong>Bokens svar:</strong> Röda blodkroppar (transporterar syre), vita blodkroppar (immunförsvar), blodplättar (koagulering).<br>
+          <span class="extra"><em>Förtydligande:</em> Röda = erytrocyter, vita = leukocyter, plättar = trombocyter.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 7 -->
+      <div class="question-box">
+        <h3>7. Vilka är njurarnas viktigaste uppgifter?</h3>
+        <div class="hint">Svar finns på sidan <strong>181</strong></div>
+        <textarea id="q63_7" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_7">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_7')">Visa facit</button>
+        <div class="answer" id="ans63_7">
+          <strong>Bokens svar:</strong> Filtrera blod, producera urin, reglera vatten- och saltbalans, avlägsna avfall (urea).<br>
+          <span class="extra"><em>Förtydligande:</em> Njurarna filtrerar ca 180 liter blod per dag.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 8 -->
+      <div class="question-box">
+        <h3>8. Nämn några ämnen som kan lagras i levern.</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q63_8" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_8">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_8')">Visa facit</button>
+        <div class="answer" id="ans63_8">
+          <strong>Bokens svar:</strong> Glykogen (energi), vitaminer (A, D, B12), järn.<br>
+          <span class="extra"><em>Förtydligande:</em> Levern omvandlar glukos till glykogen vid behov.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 9 -->
+      <div class="question-box">
+        <h3>9. Förutom blodgrupperna A, B, AB och 0 (noll) kan ditt blod också vara antingen Rh-positivt eller Rh-negativt. Ta reda på vilka risker det kan medföra vid exempelvis graviditet och förlossning. Hur kan dessa risker förhindras?</h3>
+        <div class="hint">Svar finns på sidan <strong>177</strong></div>
+        <textarea id="q63_9" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_9">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_9')">Visa facit</button>
+        <div class="answer" id="ans63_9">
+          <strong>Bokens svar:</strong> Om mamman är Rh-negativ och barnet Rh-positivt kan mamman bilda antikroppar mot barnets blod → risk för hemolytisk sjukdom hos nyfödda.<br>
+          <strong>Förebyggande:</strong> Rh-profylax (Anti-D) ges till mamman efter förlossning eller missfall.<br>
+          <span class="extra"><em>Förtydligande (min kunskap):</em> Anti-D hindrar mamman från att bilda antikroppar. Ges rutinmässigt i Sverige.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 10 -->
+      <div class="question-box">
+        <h3>10. Varför kan det vara farligt att försöka resa upp någon som har svimmat innan hen har vaknat till och känner sig bra igen?</h3>
+        <div class="hint">Svar finns på sidan <strong>177</strong></div>
+        <textarea id="q63_10" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc63_10">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q63_10')">Visa facit</button>
+        <div class="answer" id="ans63_10">
+          <strong>Bokens svar:</strong> Blodet har samlats i benen → hjärnan får inte syre → risk för ny svimning eller skada.<br>
+          <span class="extra"><em>Förtydligande:</em> Låt personen ligga med benen i högläge tills medvetandet återvänder.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Alla svar sparas i din webbläsare – perfekt repetition inför provet!</p>
+    </footer>
+  </div>
+
+  <script>
+    // Spara svar + ordantal
+    const allQuestions = document.querySelectorAll('textarea');
+    allQuestions.forEach(textarea => {
+      const id = textarea.id;
+      const saved = localStorage.getItem(id);
+      if (saved) {
+        textarea.value = saved;
+        updateWordCount(id);
+      }
+      textarea.addEventListener('input', () => {
+        localStorage.setItem(id, textarea.value);
+        updateWordCount(id);
+      });
+    });
+
+    function updateWordCount(id) {
+      const text = document.getElementById(id).value.trim();
+      const words = text === '' ? 0 : text.split(/\s+/).length;
+      document.getElementById('wc' + id.slice(1)).textContent = `${words} ord`;
+    }
+
+    function showAnswer(qId) {
+      const answerDiv = document.getElementById('ans' + qId.slice(1));
+      answerDiv.style.display = answerDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologi ÅK7 – Testa dig själv: 6.4 Rörelseorganen</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #1a1a1a; line-height: 1.7; margin: 0; padding: 20px; }
+    .container { max-width: 1000px; margin: auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+    header { background: #27ae60; color: white; padding: 22px; text-align: center; }
+    h1 { margin: 0; font-size: 1.9rem; }
+    .intro { padding: 20px; font-size: 1.05rem; color: #2d3436; }
+    .section { padding: 24px; }
+    h2 { background: #27ae60; color: white; padding: 12px 20px; margin: 0 0 18px; border-left: 6px solid #229954; font-size: 1.3rem; }
+    .question-box { background: #e8f5e9; border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin: 16px 0; }
+    .question-box h3 { margin: 0 0 8px; color: #27ae60; font-size: 1.1rem; }
+    .hint { font-size: 0.85rem; color: #636e72; font-style: italic; margin-bottom: 8px; }
+    textarea { width: 100%; min-height: 120px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical; font-family: inherit; margin-bottom: 8px; }
+    .word-count { font-size: 0.8rem; color: #74b9ff; text-align: right; margin-top: 4px; }
+    .save-notice { font-size: 0.85rem; color: #636e72; margin-top: 6px; font-style: italic; }
+    .show-btn { background: #27ae60; color: white; border: none; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; margin-top: 8px; }
+    .show-btn:hover { background: #229954; }
+    .answer { margin-top: 10px; padding: 12px; background: #e8f5e9; border: 1px solid #27ae60; border-radius: 8px; font-size: 0.95rem; display: none; }
+    .extra { font-size: 0.85rem; color: #27ae60; font-style: italic; margin-top: 8px; }
+    footer { text-align: center; padding: 18px; font-size: 0.95rem; color: #636e72; background: #f0f0f0; }
+    @media (max-width: 600px) { body { padding: 10px; } h1 { font-size: 1.6rem; } .section { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Testa dig själv: 6.4 Rörelseorganen</h1>
+      <p><strong>Skriv svar – sparas i webbläsaren – visa facit med knapp!</strong></p>
+    </header>
+
+    <div class="intro">
+      <p>Exakta frågor från uppslaget 6.4. Skriv ditt svar och klicka på <strong>"Visa facit"</strong> för att se bokens svar + eventuella förtydliganden.</p>
+    </div>
+
+    <div class="section">
+      <h2>6.4 Rörelseorganen</h2>
+
+      <!-- Fråga 1 -->
+      <div class="question-box">
+        <h3>1. Vilka är skelettets viktigaste funktioner?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_1" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_1">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_1')">Visa facit</button>
+        <div class="answer" id="ans64_1">
+          <strong>Bokens svar:</strong> Stöd (ger form), skydd (för inre organ), rörelse (fästen för muskler), bildar blodkroppar (i benmärgen), lagrar mineraler (kalcium, fosfor).<br>
+          <span class="extra"><em>Förtydligande:</em> Benmärgen i långa ben producerar röda och vita blodkroppar.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 2 -->
+      <div class="question-box">
+        <h3>2. Vilka uppgifter har ledbrosket, ledvätskan och ledbanden?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_2" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_2">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_2')">Visa facit</button>
+        <div class="answer" id="ans64_2">
+          <strong>Bokens svar:</strong> 
+          <strong>Ledbrosk:</strong> Minskar friktion, dämpar stötar.<br>
+          <strong>Ledvätska:</strong> Smörjer leden, ger näring till brosket.<br>
+          <strong>Ledband:</strong> Håller ihop benen i leden, stabiliserar.<br>
+          <span class="extra"><em>Förtydligande:</em> Synovialvätska = ledvätska, produceras av synovialhinnan.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 3 -->
+      <div class="question-box">
+        <h3>3. Nämn några olika typer av leder i kroppen.</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_3" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_3">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_3')">Visa facit</button>
+        <div class="answer" id="ans64_3">
+          <strong>Bokens svar:</strong> Kulled (axel, höft – stor rörlighet), gångjärnsled (armbåge, knä – en riktning), vridled (halsryggrad), sadelled (tumme), planled (handlov).<br>
+          <span class="extra"><em>Förtydligande:</em> Kulled har 3 rörelseaxlar, gångjärnsled 1 axel.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 4 -->
+      <div class="question-box">
+        <h3>4. Vilka muskler styr du med din vilja och vilka fungerar oberoende av viljan?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_4" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_4">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_4')">Visa facit</button>
+        <div class="answer" id="ans64_4">
+          <strong>Bokens svar:</strong> 
+          <strong>Viljestyrda:</strong> Skelettmuskler (t.ex. armar, ben).<br>
+          <strong>Oberoende av viljan:</strong> Hjärtmuskel, glatt muskulatur (i tarm, blodkärl).<br>
+          <span class="extra"><em>Förtydligande:</em> Skelettmuskler = tvärstrimmiga, hjärtmuskel = tvärstrimmig men autonom, glatt = slät.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 5 -->
+      <div class="question-box">
+        <h3>5. Beskriv hur bicepts- och triceptsmusklerna samarbetar.</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_5" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_5">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_5')">Visa facit</button>
+        <div class="answer" id="ans64_5">
+          <strong>Bokens svar:</strong> De är antagonister. När biceps drar ihop sig böjs armen, triceps slappnar av. När triceps drar ihop sig sträcks armen, biceps slappnar av.<br>
+          <span class="extra"><em>Förtydligande:</em> Muskler arbetar alltid parvis – en flexor (böjer) och en extensor (sträcker).</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 6 -->
+      <div class="question-box">
+        <h3>6. Hur påverkas din kondition av det som händer i muskelcellerna när du tränar?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_6" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_6">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_6')">Visa facit</button>
+        <div class="answer" id="ans64_6">
+          <strong>Bokens svar:</strong> Fler mitokondrier → mer ATP → bättre uthållighet. Muskler blir starkare och tål mer syre.<br>
+          <span class="extra"><em>Förtydligande:</em> Träning ökar kapillärisering och enzymaktivitet i cellandningen.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 7 -->
+      <div class="question-box">
+        <h3>7. Varför får du mjölksyra i musklerna när du anstränger dig alltför hårt?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_7" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_7">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_7')">Visa facit</button>
+        <div class="answer" id="ans64_7">
+          <strong>Bokens svar:</strong> Syrebrist → anaerob cellandning → glukos bryts till mjölksyra (laktat) istället för koldioxid och vatten.<br>
+          <span class="extra"><em>Förtydligande:</em> Mjölksyra orsakar trötthet och svider – kroppen gör om den till glukos i levern senare.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 8 -->
+      <div class="question-box">
+        <h3>8. Vad beror träningsvärk på och hur kan man minska risken för träningsvärk?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_8" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_8">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_8')">Visa facit</button>
+        <div class="answer" id="ans64_8">
+          <strong>Bokens svar:</strong> 
+          <strong>Orsak:</strong> Mikroskopiska skador i muskelfibrer och inflammation.<br>
+          <strong>Förebygg:</strong> Värm upp, öka belastning gradvis, stretcha efteråt, vila.<br>
+          <span class="extra"><em>Förtydligande:</em> Träningsvärk är inte mjölksyra – den försvinner snabbt. Värk kommer 24–48 timmar efter träning.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 9 -->
+      <div class="question-box">
+        <h3>9. Ta reda på mer om snabba och långsamma muskelfibrer. Vilken betydelse har de för prestationerna i olika idrottsgrenar?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_9" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_9">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_9')">Visa facit</button>
+        <div class="answer" id="ans64_9">
+          <strong>Bokens svar:</strong> 
+          <strong>Snabba fibrer (typ II):</strong> Starka, tröttnar snabbt – bra för sprint, styrkelyft.<br>
+          <strong>Långsamma fibrer (typ I):</strong> Uthålliga, syreberoende – bra för maraton, cykling.<br>
+          <span class="extra"><em>Förtydligande (min kunskap):</em> Genetik avgör fördelning – t.ex. Usain Bolt har många snabba fibrer, maratonlöpare många långsamma.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 10 -->
+      <div class="question-box">
+        <h3>10. Varför är det bra för musklerna att värma upp innan man anstränger sig maximalt när man tränar och tävlar?</h3>
+        <div class="hint">Svar finns på sidan <strong>184</strong></div>
+        <textarea id="q64_10" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc64_10">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q64_10')">Visa facit</button>
+        <div class="answer" id="ans64_10">
+          <strong>Bokens svar:</strong> Ökar blodflöde, höjer temperatur → muskler blir smidigare, snabbare sammandragning, minskar skaderisk.<br>
+          <span class="extra"><em>Förtydligande:</em> Enzymer fungerar bättre vid 38–39°C. Nervimpulser går snabbare.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Alla svar sparas i din webbläsare – perfekt repetition inför provet!</p>
+    </footer>
+  </div>
+
+  <script>
+    // Spara svar + ordantal
+    const allQuestions = document.querySelectorAll('textarea');
+    allQuestions.forEach(textarea => {
+      const id = textarea.id;
+      const saved = localStorage.getItem(id);
+      if (saved) {
+        textarea.value = saved;
+        updateWordCount(id);
+      }
+      textarea.addEventListener('input', () => {
+        localStorage.setItem(id, textarea.value);
+        updateWordCount(id);
+      });
+    });
+
+    function updateWordCount(id) {
+      const text = document.getElementById(id).value.trim();
+      const words = text === '' ? 0 : text.split(/\s+/).length;
+      document.getElementById('wc' + id.slice(1)).textContent = `${words} ord`;
+    }
+
+    function showAnswer(qId) {
+      const answerDiv = document.getElementById('ans' + qId.slice(1));
+      answerDiv.style.display = answerDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologi ÅK7 – Testa dig själv: 6.5 Huden</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #1a1a1a; line-height: 1.7; margin: 0; padding: 20px; }
+    .container { max-width: 1000px; margin: auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+    header { background: #e74c3c; color: white; padding: 22px; text-align: center; }
+    h1 { margin: 0; font-size: 1.9rem; }
+    .intro { padding: 20px; font-size: 1.05rem; color: #2d3436; }
+    .section { padding: 24px; }
+    h2 { background: #e74c3c; color: white; padding: 12px 20px; margin: 0 0 18px; border-left: 6px solid #c0392b; font-size: 1.3rem; }
+    .question-box { background: #fadbd8; border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin: 16px 0; }
+    .question-box h3 { margin: 0 0 8px; color: #e74c3c; font-size: 1.1rem; }
+    .hint { font-size: 0.85rem; color: #636e72; font-style: italic; margin-bottom: 8px; }
+    textarea { width: 100%; min-height: 120px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical; font-family: inherit; margin-bottom: 8px; }
+    .word-count { font-size: 0.8rem; color: #74b9ff; text-align: right; margin-top: 4px; }
+    .save-notice { font-size: 0.85rem; color: #636e72; margin-top: 6px; font-style: italic; }
+    .show-btn { background: #e74c3c; color: white; border: none; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; margin-top: 8px; }
+    .show-btn:hover { background: #c0392b; }
+    .answer { margin-top: 10px; padding: 12px; background: #fadbd8; border: 1px solid #e74c3c; border-radius: 8px; font-size: 0.95rem; display: none; }
+    .extra { font-size: 0.85rem; color: #27ae60; font-style: italic; margin-top: 8px; }
+    footer { text-align: center; padding: 18px; font-size: 0.95rem; color: #636e72; background: #f0f0f0; }
+    @media (max-width: 600px) { body { padding: 10px; } h1 { font-size: 1.6rem; } .section { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Testa dig själv: 6.5 Huden</h1>
+      <p><strong>Skriv svar – sparas i webbläsaren – visa facit med knapp!</strong></p>
+    </header>
+
+    <div class="intro">
+      <p>Exakta frågor från uppslaget 6.5. Skriv ditt svar och klicka på <strong>"Visa facit"</strong> för att se bokens svar + eventuella förtydliganden.</p>
+    </div>
+
+    <div class="section">
+      <h2>6.5 Huden</h2>
+
+      <!-- Fråga 1 -->
+      <div class="question-box">
+        <h3>1. Vilka tre lager består huden av?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_1" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_1">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_1')">Visa facit</button>
+        <div class="answer" id="ans65_1">
+          <strong>Bokens svar:</strong> Överhuden (epidermis), läderhuden (dermis), underhuden (subcutis).<br>
+          <span class="extra"><em>Förtydligande:</em> Överhuden är död hud, läderhuden innehåller nerver och blodkärl, underhuden lagrar fett.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 2 -->
+      <div class="question-box">
+        <h3>2. Vad finns i de olika lagren och vilka uppgifter har de?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_2" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_2">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_2')">Visa facit</button>
+        <div class="answer" id="ans65_2">
+          <strong>Bokens svar:</strong> 
+          <strong>Överhuden:</strong> Döda celler, skyddar mot skador och vätska.<br>
+          <strong>Läderhuden:</strong> Blodkärl, nerver, svettkörtlar, hårrötter – känsla, temperaturreglering.<br>
+          <strong>Underhuden:</strong> Fettlager – isolering, energireserv, dämpning.<br>
+          <span class="extra"><em>Förtydligande:</em> Överhuden förnyas var 4:e vecka.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 3 -->
+      <div class="question-box">
+        <h3>3. Var bildas pigmentceller och vilken funktion har de?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_3" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_3">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_3')">Visa facit</button>
+        <div class="answer" id="ans65_3">
+          <strong>Bokens svar:</strong> Bildas i överhuden (melanocyter). Funktionen: producerar melanin – skyddar mot UV-strålning, ger hudfärg.<br>
+          <span class="extra"><em>Förtydligande:</em> Mörkare hud = mer melanin = bättre UV-skydd.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 4 -->
+      <div class="question-box">
+        <h3>4. På vilket sätt kan huden reglera vår kroppstemperatur?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_4" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_4">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_4')">Visa facit</button>
+        <div class="answer" id="ans65_4">
+          <strong>Bokens svar:</strong> 
+          <strong>Varmt:</strong> Svettkörtlar producerar svett → avdunstning kyler.<br>
+          <strong>Kallt:</strong> Blodkärl drar ihop sig → mindre värme förloras, gåshud (hårmusklerna drar ihop sig).<br>
+          <span class="extra"><em>Förtydligande:</em> Termoreglering styrs av hypotalamus i hjärnan.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 5 -->
+      <div class="question-box">
+        <h3>5. Var lagras det mesta av vårt fett?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_5" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_5">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_5')">Visa facit</button>
+        <div class="answer" id="ans65_5">
+          <strong>Bokens svar:</strong> I underhuden (subcutis).<br>
+          <span class="extra"><em>Förtydligande:</em> Fett fungerar som energireserv, isolering och stötdämpning.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 6 -->
+      <div class="question-box">
+        <h3>6. Varför gör det inte ont att klippa naglar och hår?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_6" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_6">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_6')">Visa facit</button>
+        <div class="answer" id="ans65_6">
+          <strong>Bokens svar:</strong> De består av döda celler fyllda med keratin – inga nerver eller blodkärl.<br>
+          <span class="extra"><em>Förtydligande:</em> Smärtan kommer bara om man klipper ner i nagelbädden eller hårsäcken.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 7 -->
+      <div class="question-box">
+        <h3>7. Svett består mest av vatten och luktar nästan ingenting. Vad är det som gör att svett som stannar kvar länge på huden börjar lukta? Hur fungerar deodorant mot svett?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_7" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_7">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_7')">Visa facit</button>
+        <div class="answer" id="ans65_7">
+          <strong>Bokens svar:</strong> 
+          <strong>Lukt:</strong> Bakterier på huden bryter ner svett → illaluktande ämnen.<br>
+          <strong>Deodorant:</strong> Dödar bakterier (antiperspirant minskar svettproduktion med aluminiumsalter).<br>
+          <span class="extra"><em>Förtydligande:</em> Apokrina svettkörtlar (i armhålor, ljumskar) ger mer lukt än eccrina (övriga kroppen).</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+
+      <!-- Fråga 8 -->
+      <div class="question-box">
+        <h3>8. Varför är det i solfattiga länder som till exempel Sverige, större risk att få brist på D-vitamin för de som har mörk hud än för de som har ljus hud?</h3>
+        <div class="hint">Svar finns på sidan <strong>189</strong></div>
+        <textarea id="q65_8" placeholder="Skriv ditt svar här..."></textarea>
+        <div class="word-count" id="wc65_8">0 ord</div>
+        <button class="show-btn" onclick="showAnswer('q65_8')">Visa facit</button>
+        <div class="answer" id="ans65_8">
+          <strong>Bokens svar:</strong> Mörk hud innehåller mer melanin → blockerar UV-strålar → mindre D-vitamin bildas i huden. Ljus hud släpper in mer UV → mer D-vitamin.<br>
+          <span class="extra"><em>Förtydligande (min kunskap):</em> D-vitamin bildas från 7-dehydrokolesterol vid UVB-exponering. I Sverige rekommenderas tillskott vintertid, särskilt för mörkhyade.</span>
+        </div>
+        <div class="save-notice">Ditt svar sparas automatiskt</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Alla svar sparas i din webbläsare – perfekt repetition inför provet!</p>
+    </footer>
+  </div>
+
+  <script>
+    // Spara svar + ordantal
+    const allQuestions = document.querySelectorAll('textarea');
+    allQuestions.forEach(textarea => {
+      const id = textarea.id;
+      const saved = localStorage.getItem(id);
+      if (saved) {
+        textarea.value = saved;
+        updateWordCount(id);
+      }
+      textarea.addEventListener('input', () => {
+        localStorage.setItem(id, textarea.value);
+        updateWordCount(id);
+      });
+    });
+
+    function updateWordCount(id) {
+      const text = document.getElementById(id).value.trim();
+      const words = text === '' ? 0 : text.split(/\s+/).length;
+      document.getElementById('wc' + id.slice(1)).textContent = `${words} ord`;
+    }
+
+    function showAnswer(qId) {
+      const answerDiv = document.getElementById('ans' + qId.slice(1));
+      answerDiv.style.display = answerDiv.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>  
+</html>
