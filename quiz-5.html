@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologi ÅK7 – Quiz: Rörelseorganen</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #fef2f2; color: #1a1a1a; line-height: 1.6; margin: 0; padding: 20px; }
+    .container { max-width: 900px; margin: auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
+    header { background: #e74c3c; color: white; padding: 20px; text-align: center; }
+    h1 { margin: 0; font-size: 1.8rem; }
+    .quiz-container { padding: 25px; }
+    .question { background: #fdf2f2; border: 1px solid #eee; border-radius: 12px; padding: 18px; margin-bottom: 20px; }
+    .question h3 { margin: 0 0 12px; color: #c0392b; font-size: 1.1rem; }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option { padding: 12px 16px; background: #fdf2f2; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+    .option:hover { background: #fadbd8; }
+    .option.correct { background: #27ae60; color: white; }
+    .option.wrong { background: #e74c3c; color: white; }
+    .btn { background: #c0392b; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 1rem; cursor: pointer; margin-top: 15px; }
+    .btn:hover { background: #992d22; }
+    .btn:disabled { background: #95a5a6; cursor: not-allowed; }
+    .result { margin-top: 20px; padding: 20px; background: #fdf2f2; border-radius: 12px; text-align: center; font-size: 1.3rem; font-weight: bold; display: none; }
+    .grade-A { color: #27ae60; }
+    .grade-B { color: #2ecc71; }
+    .grade-C { color: #f1c40f; }
+    .grade-D { color: #e67e22; }
+    .grade-E { color: #e74c3c; }
+    .grade-F { color: #c0392b; }
+    .highscore { font-size: 0.9rem; color: #555; margin-top: 10px; }
+    .restart { background: #95a5a6; margin-left: 10px; }
+    .restart:hover { background: #7f8c8d; }
+    @media (max-width: 600px) { .quiz-container { padding: 15px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quiz: Rörelseorganen</h1>
+      <p>10 frågor – Omedelbar feedback & betyg A–F!</p>
+    </header>
+
+    <div class="quiz-container" id="quiz">
+      <!-- Frågor genereras av JavaScript -->
+    </div>
+
+    <div id="result" class="result">
+      <div id="score"></div>
+      <div id="grade"></div>
+      <div class="highscore" id="highscore"></div>
+      <button class="btn restart" onclick="restartQuiz()">Börja om</button>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        q: "Hur många ben har en vuxen människa?",
+        options: ["126", "206", "306", "406"],
+        correct: 1
+      },
+      {
+        q: "Vad är skelettets huvuduppgifter?",
+        options: ["Producera urin", "Stödja, skydda, rörelse, blodproduktion", "Andas in syre", "Filtrera blod"],
+        correct: 1
+      },
+      {
+        q: "Var bildas röda blodkroppar?",
+        options: ["I musklerna", "I röda märgen", "I hjärnan", "I huden"],
+        correct: 1
+      },
+      {
+        q: "Vad är skillnaden mellan kompaktben och svampben?",
+        options: ["Kompaktben är poröst, svampben är tätt", "Kompaktben är hårt, svampben är lätt", "Båda är mjuka", "Ingen skillnad"],
+        correct: 1
+      },
+      {
+        q: "Vilken typ av led kan röra sig i alla riktningar?",
+        options: ["Gångjärnsled", "Fast led", "Kulled", "Vridled"],
+        correct: 2
+      },
+      {
+        q: "Vilken ledtyp finns i armbågen?",
+        options: ["Kulled", "Gångjärnsled", "Fast led", "Glidled"],
+        correct: 1
+      },
+      {
+        q: "Vad fäster muskler vid ben?",
+        options: ["Ledband", "Senor", "Brosk", "Märg"],
+        correct: 1
+      },
+      {
+        q: "Hur arbetar muskler för att röra ett ben?",
+        options: ["En muskel gör allt", "Parvis – en drar, en slappnar", "Alla drar samtidigt", "Muskler rör sig inte"],
+        correct: 1
+      },
+      {
+        q: "Vad håller ben ihop vid en led?",
+        options: ["Senor", "Muskel", "Ledband", "Märg"],
+        correct: 2
+      },
+      {
+        q: "Vilka celler bygger ben?",
+        options: ["Osteoklaster", "Osteoblaster", "Röda blodkroppar", "Svettkörtlar"],
+        correct: 1
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let highScore = parseInt(localStorage.getItem('movementQuizHS') || '0');
+
+    function showQuestion() {
+      const q = questions[current];
+      const html = `
+        <div class="question">
+          <h3>Fråga ${current + 1}/10: ${q.q}</h3>
+          <div class="options">
+            ${q.options.map((opt, i) => `<div class="option" onclick="choose(${i})">${opt}</div>`).join('')}
+          </div>
+        </div>
+        <button class="btn" id="nextBtn" disabled onclick="next()">Nästa fråga</button>
+      `;
+      document.getElementById('quiz').innerHTML = html;
+    }
+
+    function choose(selected) {
+      if (document.querySelector('.option.correct')) return;
+      const correct = questions[current].correct;
+      document.querySelectorAll('.option').forEach((el, i) => {
+        if (i === correct) el.classList.add('correct');
+        else if (i === selected) el.classList.add('wrong');
+      });
+      if (selected === correct) score++;
+      document.getElementById('nextBtn').disabled = false;
+    }
+
+    function next() {
+      current++;
+      if (current < questions.length) showQuestion();
+      else showResult();
+    }
+
+    function getGrade(p) {
+      if (p >= 90) return {g: "A", c: "grade-A", t: "Utmärkt!"};
+      if (p >= 80) return {g: "B", c: "grade-B", t: "Mycket bra!"};
+      if (p >= 70) return {g: "C", c: "grade-C", t: "Bra!"};
+      if (p >= 60) return {g: "D", c: "grade-D", t: "Godkänt"};
+      if (p >= 50) return {g: "E", c: "grade-E", t: "Nära godkänt"};
+      return {g: "F", c: "grade-F", t: "Underkänt – Träna mer!"};
+    }
+
+    function showResult() {
+      if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('movementQuizHS', highScore);
+      }
+      const percent = Math.round((score / questions.length) * 100);
+      const g = getGrade(percent);
+      document.getElementById('quiz').style.display = 'none';
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('score').innerHTML = `Du fick <strong>${score}/10</strong> rätt (${percent}%)`;
+      document.getElementById('grade').innerHTML = `<span class="${g.c}">Betyg: ${g.g} – ${g.t}</span>`;
+      document.getElementById('highscore').innerText = highScore > score ? `Ditt högsta: ${highScore}/10` : "Nytt rekord!";
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result').style.display = 'none';
+      document.getElementById('quiz').style.display = 'block';
+      showQuestion();
+    }
+
+    window.addEventListener('load', showQuestion);
+  </script>
+</body>
+</html>
